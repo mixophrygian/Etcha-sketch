@@ -1,0 +1,54 @@
+
+
+.titleWrapper {
+	position: relative;
+	width: 325px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0px;
+	text-align: center;
+	background-color: white;
+}
+
+.toggleWrapper {
+	position: relative;
+	margin-left: 50px;
+}
+
+.colorWrapper {
+	position: relative;
+	float: right;
+	margin-right: 50px;
+	margin-bottom: 2px;
+}
+
+h1 {
+	margin-bottom: -10px;
+	font-size: 3em;
+}
+
+button {
+	margin-left: 30px;
+	margin-bottom: 10px;
+	height: 30px;
+	width: 80px;
+	clear: both;
+}
+
+.square {
+	display: inline-block;
+	border: 1px solid gray;
+}
+
+.container {
+	border: 1px gray solid;
+	background-color: white;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.unfilled {
+	background-color: white;
+}
