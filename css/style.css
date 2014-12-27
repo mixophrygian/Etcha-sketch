@@ -13,14 +13,7 @@
 
 .toggleWrapper {
 	position: relative;
-	margin-left: 50px;
-}
-
-.colorWrapper {
-	position: relative;
-	float: right;
-	margin-right: 50px;
-	margin-bottom: 2px;
+	margin-left: 150px;
 }
 
 h1 {
@@ -47,6 +40,7 @@ button {
 	width: 960px;
 	margin-left: auto;
 	margin-right: auto;
+	height: auto;
 }
 
 .unfilled {

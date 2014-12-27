@@ -16,7 +16,7 @@ var randomColor = Math.floor(Math.random()*16777215).toString(16);
 	$(".square").wrapAll("<div class='container'></div>");
 
 	var containerWidth = $(".container").width();
-	var squareBorder = parseInt($(".square").css("border"), 10);
+	var squareBorder = 1;
 	var squareWidth = containerWidth/size - (2 * squareBorder);
 	$(".square").width(squareWidth);
 	$(".square").height(squareWidth);
