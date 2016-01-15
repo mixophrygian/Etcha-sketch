@@ -1,47 +1,50 @@
 
 $(document).ready(function() {
 
-var size = 30;
-var eraseButton = document.getElementById("Erase");
-var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  var size = 30;
 
-	function makeGrid () {
+  function getRandomColor() {
+    return Math.floor(Math.random()*16777215).toString(16);
+  };
 
-	for(var i = 0; i < size; i++) {
-		for(var j = 0; j< size;  j++){
-			$("body").append("<div class='square'></div>");
-		}
-		$("body").append("<div class='square'></div>");
-	}
-	$(".square").wrapAll("<div class='container'></div>");
+  function makeGrid () {
+    for(var i = 0; i < size; i++) {
+      for(var j = 0; j< size;  j++){
+        $("body").append("<div class='square'></div>");
+      }
+      $("body").append("<div class='square'></div>");
+    }
 
-	var containerWidth = $(".container").width();
-	var squareBorder = 1;
-	var squareWidth = containerWidth/size - (2 * squareBorder);
-	$(".square").width(squareWidth);
-	$(".square").height(squareWidth);
+    $(".square").wrapAll("<div class='container'></div>");
 
-	$("#Black").click(function() {
-	$(".square").hover(function() {		
-		$(this).css("background-color", "black");
-		});
-	});
+    var containerWidth = $(".container").width();
+    var squareBorder = 1;
+    var squareWidth = containerWidth/size - (2 * squareBorder);
+    
+    $(".square").width(squareWidth);
+    $(".square").height(squareWidth);
 
-	$("#Erase").click(function() {
-		$(".square").hover(function() {		
-			$(this).css("background-color", "white");
-		});
-	});
+    $("#Black").click(function() {
+      $(".square").hover(function() {		
+        $(this).css("background-color", "black");
+      });
+    });
 
-	$("#Rainbow").click(function() {
-		$(".square").hover(function() {
-			$(this).css("background-color", Math.floor(Math.random()*16777215).toString(16));
-		});
+    $("#Erase").click(function() {
+      $(".square").hover(function() {		
+        $(this).css("background-color", "white");
+      });
+    });
 
-	});
+    $("#Rainbow").click(function() {
+      $(".square").hover(function() {
+        $(this).css("background-color", getRandomColor());
+      });
+    });
 
-	$("#Black").click();
+    $("#Black").click();
 };
+
 	makeGrid();
 
 	$("#clear").click(function() {
